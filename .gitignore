@@ -1,0 +1,24 @@
+# Credenziali: non vanno mai nel repository
+*.json
+!tests/fixtures/*.json
+*.pem
+*.p12
+*.key
+.env
+.env.*
+credenziali*/
+secrets/
+
+# Dati personali esportati dal foglio
+*.xlsx
+export/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+build/
+dist/

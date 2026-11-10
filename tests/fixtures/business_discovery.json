@@ -1,0 +1,46 @@
+{
+  "business_discovery": {
+    "username": "profilo_prova",
+    "name": "Profilo di Prova",
+    "biography": "Allenamenti a casa per neomamme. Collaborazioni: prova@example.com",
+    "website": "https://example.com",
+    "followers_count": 25000,
+    "media_count": 340,
+    "media": {
+      "data": [
+        {
+          "id": "1001",
+          "caption": "Circuito da 20 minuti senza attrezzi",
+          "like_count": 1200,
+          "comments_count": 85,
+          "view_count": 4000,
+          "media_type": "VIDEO",
+          "media_product_type": "REELS",
+          "permalink": "https://www.instagram.com/reel/AAA/",
+          "timestamp": "2026-11-01T10:00:00+0000"
+        },
+        {
+          "id": "1002",
+          "caption": "Cosa mangio in una giornata tipo",
+          "comments_count": 40,
+          "media_type": "CAROUSEL_ALBUM",
+          "media_product_type": "FEED",
+          "permalink": "https://www.instagram.com/p/BBB/",
+          "timestamp": "2026-10-28T09:00:00+0000"
+        },
+        {
+          "id": "1003",
+          "like_count": 900,
+          "comments_count": 30,
+          "view_count": 2000,
+          "media_type": "VIDEO",
+          "media_product_type": "REELS",
+          "permalink": "https://www.instagram.com/reel/CCC/",
+          "timestamp": "2026-10-20T18:00:00+0000"
+        }
+      ]
+    },
+    "id": "17841400000000000"
+  },
+  "id": "17841499999999999"
+}

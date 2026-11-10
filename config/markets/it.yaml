@@ -1,0 +1,46 @@
+# Profilo del mercato italiano. Valori di partenza: si ritarano dopo il test.
+mercato: it
+lingua: italiano
+tono: >
+  Dai del tu. Cordiale e diretto, frasi brevi, nessun tono da venditore,
+  nessuna promessa di guadagno. Un riferimento concreto a 1-2 contenuti del creator.
+soglie:
+  follower_min: 10000
+  follower_max: 100000
+  follower_max_confronto: 300000      # alcuni profili 100.000-300.000 per confronto
+  rapporto_min_views_follower: 0.1    # visualizzazioni medie Reel >= un decimo dei follower
+  post_recenti_da_analizzare: 12
+prezzi_indicativi:
+  valuta: EUR
+  ebook_min: 15
+  ebook_max: 29
+# Segnali di un prodotto proprio in vendita (minuscolo, parole intere).
+parole_prodotto:
+  - ebook
+  - e-book
+  - il mio ebook
+  - il mio corso
+  - la mia guida
+  - il mio libro
+  - corso online
+  - videocorso
+  - masterclass
+  - acquista ora
+  - compra ora
+  - shop online
+  - in vendita
+  - programma di allenamento
+domini_vendita:
+  - gumroad.com
+  - payhip.com
+  - whop.com
+  - stan.store
+  - teachable.com
+  - kajabi.com
+  - podia.com
+  - thinkific.com
+  - systeme.io
+  - lemonsqueezy.com
+  - patreon.com
+  - etsy.com
+  - myshopify.com

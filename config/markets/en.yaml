@@ -1,0 +1,44 @@
+# English-market profile. Starting values: re-tune after the test.
+mercato: en
+lingua: English
+tono: >
+  Friendly and concise, first name, short sentences, no hype,
+  no income promises. One concrete reference to 1-2 of the creator's posts.
+soglie:
+  follower_min: 10000
+  follower_max: 100000
+  follower_max_confronto: 300000
+  rapporto_min_views_follower: 0.1
+  post_recenti_da_analizzare: 12
+prezzi_indicativi:
+  valuta: USD
+  ebook_min: 19
+  ebook_max: 39
+parole_prodotto:
+  - ebook
+  - e-book
+  - my ebook
+  - my course
+  - my guide
+  - my book
+  - online course
+  - masterclass
+  - buy now
+  - shop now
+  - coaching program
+  - training program
+  - preorder
+domini_vendita:
+  - gumroad.com
+  - payhip.com
+  - whop.com
+  - stan.store
+  - teachable.com
+  - kajabi.com
+  - podia.com
+  - thinkific.com
+  - systeme.io
+  - lemonsqueezy.com
+  - patreon.com
+  - etsy.com
+  - myshopify.com

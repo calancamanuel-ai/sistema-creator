@@ -1,0 +1,14 @@
+[project]
+name = "sistema-creator"
+version = "0.1.0"
+description = "Piano 1: trovare creator e creare ebook"
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.32",
+    "PyYAML>=6.0",
+    "google-auth>=2.30",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
