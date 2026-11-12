@@ -126,34 +126,28 @@ Prima della fase 3 colleghi Gmail all'account Workspace del dominio dedicato al 
 
 ---
 
-## 5. Ambiente cloud di Claude Code: segreti, domini, preparazione 💻
+## 5. Segreti nell'ambiente cloud `sistema-creator` 💻
 
-Conviene creare un ambiente dedicato a questo progetto, così variabili e accessi restano separati dalle altre sessioni.
+L'ambiente `sistema-creator` esiste già ed è personale. È configurato così:
 
-1. In una sessione di Claude Code sul web: menu dell'ambiente nella barra del titolo → **Aggiungi ambiente** (o **Modifica** su quello esistente). Nome `sistema-creator`, ambiente personale.
-2. **Variabili d'ambiente**, una per riga, senza virgolette:
+- **Rete limitata:** raggiunge `graph.facebook.com`, `oauth2.googleapis.com`, `sheets.googleapis.com`, `github.com` e i gestori di pacchetti (pypi).
+- **Script di preparazione:** installa i pacchetti Python del repository all'avvio di ogni sessione.
+- **Repository:** `sistema-creator` è collegato.
+
+Manca solo una cosa: i segreti. Conviene farlo da computer, dove hai negli appunti il JSON del passo 1.5.
+
+1. In una sessione di Claude Code sul web: menu dell'ambiente nella barra del titolo → **Modifica** su `sistema-creator`.
+2. In **Variabili d'ambiente** scrivi una variabile per riga, senza virgolette:
    ```
    GOOGLE_SERVICE_ACCOUNT_JSON={"type": "service_account", ... tutto il JSON su una riga ...}
    SHEET_ID=...
    IG_ACCESS_TOKEN=...
    IG_USER_ID=...
    ```
-   Le variabili sono visibili a chi può modificare l'ambiente: lascialo **personale**.
-3. **Accesso alla rete.** Con il livello **Limitato** aggiungi questi domini consentiti, lasciando attiva l'opzione per i gestori di pacchetti:
-   ```
-   graph.facebook.com
-   oauth2.googleapis.com
-   sheets.googleapis.com
-   pypi.org
-   files.pythonhosted.org
-   github.com
-   ```
-   Con il livello **Illimitato** non serve aggiungere nulla.
-4. **Script di preparazione**, che installa i pacchetti Python a ogni avvio:
-   ```
-   if [ -f sistema-creator/requirements.txt ]; then pip install -q -r sistema-creator/requirements.txt; fi
-   ```
-5. Se le impostazioni mostrano l'elenco **Repository**, aggiungi `sistema-creator`. Salva.
+   Se non hai ancora `IG_USER_ID`, togli quella riga: te lo trova lo script del passo 6 (vedi passo 3.4).
+3. Salva. Le variabili si leggono all'avvio della sessione: apri una **sessione nuova** su `sistema-creator`.
+
+Le variabili sono visibili a chi può modificare l'ambiente: lascialo **personale**.
 
 Le attività programmate useranno lo stesso ambiente: quando le creeremo, scegli `sistema-creator`.
 
@@ -181,6 +175,6 @@ Per il mercato inglese aggiungi `--mercato en`.
 | `GOOGLE_SERVICE_ACCOUNT_JSON non è un JSON valido` | Ripeti il passo 1.5 e reincolla il JSON intero |
 | `token non valido o scaduto` | Rigenera il token (passo 3.3) |
 | `account non trovato o non professionale` | Il nome utente non esiste o non è un account professionale: provane un altro |
-| `Meta non raggiungibile` | Controlla i domini consentiti (passo 5.3) |
+| `Meta non raggiungibile` | Controlla che la sessione usi l'ambiente `sistema-creator` (passo 5) |
 
 La fase 0 è chiusa quando la verifica passa e un'attività programmata di prova legge il foglio e crea una bozza in Gmail.
