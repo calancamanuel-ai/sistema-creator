@@ -58,13 +58,18 @@ Si passa a un server (VPS, cron, API di Claude, credenziali Google proprie, even
 
 1. Trovare le nicchie più promettenti (punteggio sotto).
 2. Trovare i creator in quelle nicchie, con i filtri.
-3. Creare le bozze dei messaggi basate sui loro profili.
+3. Controllo web veloce su chi passa i filtri, poi bozze dei messaggi basate sui loro profili.
 4. Manuel invia le bozze; il sistema gestisce promemoria e risposte.
-5. Accordo con il creator che dice sì.
-6. Scelta del tema con il creator e intervista.
-7. Creazione dell'ebook, rivisto e approvato dal creator.
-8. Pubblicazione su Whop, con divisione dei ricavi e vendita di prova.
-9. Kit di lancio per il creator e monitoraggio delle vendite.
+5. Approfondimento con ricerca web sui creator che rispondono con interesse.
+6. Accordo con il creator che dice sì.
+7. Scelta del tema con il creator e intervista.
+8. Creazione dell'ebook, rivisto e approvato dal creator.
+9. Pubblicazione su Whop, con divisione dei ricavi e vendita di prova.
+10. Kit di lancio per il creator e monitoraggio delle vendite.
+
+Controllo veloce (passaggio 3): pochi minuti per creator. Cerca altri canali (YouTube, TikTok, sito, newsletter) e prodotti già in vendita fuori da Instagram (pagine di link, negozi come Gumroad o Stan, corsi), così il filtro "nessun prodotto proprio" è affidabile e il messaggio è più preciso.
+
+Approfondimento (passaggio 5): solo per chi risponde con interesse. Pubblico sui vari canali, temi che funzionano meglio, collaborazioni e sponsor, prodotti passati. Serve a preparare la chiamata e l'accordo.
 
 ## Punteggio delle nicchie
 
@@ -142,7 +147,7 @@ Dati dall'API ufficiale di Instagram (Business Discovery): follower, post, like,
     - Fatto quando: un'esecuzione programmata di prova legge il foglio, crea una bozza in Gmail e una richiesta all'API di Instagram restituisce i dati di un creator.
 2. **Fase 1 — Analisi delle nicchie.** Istruzioni in `prompts/`, `data/nicchie.csv` con voti, prove e punteggio per mercato. Fatto quando: Manuel ha controllato le prime 10 e scelto 3 nicchie + 1 esplorativa.
 3. **Fase 2 — Creator e filtri.** Fatto quando: 10 nomi utente aggiunti nel foglio compaiono con dati e filtri corretti (Manuel ne controlla 3 a mano).
-4. **Fase 3 — Analisi e bozze.** Prima di iniziare: nome, dominio dedicato e Google Workspace; il foglio si copia nel Drive di Workspace (nuovo `SHEET_ID`, condiviso con l'account di servizio) e Gmail si ricollega all'account nuovo. Bozze personalizzate in italiano o inglese, con un riferimento a 1-2 contenuti del creator, create in Gmail. Fatto quando: per 10 creator ci sono le bozze in Gmail e il foglio è aggiornato.
+4. **Fase 3 — Controllo web, analisi e bozze.** Prima di iniziare: nome, dominio dedicato e Google Workspace; il foglio si copia nel Drive di Workspace (nuovo `SHEET_ID`, condiviso con l'account di servizio) e Gmail si ricollega all'account nuovo. Bozze personalizzate in italiano o inglese, con un riferimento a 1-2 contenuti del creator, create in Gmail. Fatto quando: per 10 creator ci sono le bozze in Gmail e il foglio è aggiornato.
 5. **Fase 4 — Risposte e promemoria.** Il sistema legge le risposte, le classifica (sì, forse, no, richiesta di informazioni), aggiorna il foglio e prepara le bozze di replica. Promemoria dopo 4-5 giorni, al massimo due; stop se il creator risponde o chiede di non essere ricontattato. Notifica serale con il riepilogo. Fatto quando: il ciclo funziona con una casella di prova di Manuel.
 6. **STOP — Test reale.** 30-50 creator in 2-3 settimane. Se non arriva nessun sì si cambiano messaggio, nicchie o fasce di follower; non si costruisce altro finché i contatti non funzionano.
 7. **Fase 5 — Ebook.** Dopo il primo sì, in sessione con Manuel. Didascalie dall'API, video e vocali dal creator, 3-5 temi proposti, domande per l'intervista, trascrizione, ricerca delle fonti, indice, capitoli con la scheda di stile, controlli (fatti sulle fonti, passaggi copiati, coerenza dello stile). Fatto quando: Manuel ha letto la bozza e il creator l'ha approvata.
